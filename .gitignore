@@ -1,0 +1,4 @@
+/build
+/node_modules
+/gsap-bonus.tgz
+package-lock.json
