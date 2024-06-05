@@ -1,26 +1,10 @@
-@import "./libs";
-@import "./variables";
-@import "./fonts";
-@import "./mixins";
-@import "./base";
-@import "./global";
-@import "./components/ui";
+@import './libs';
+@import './variables';
+@import './mixins';
+@import './fonts';
+@import './base';
+@import './extends';
+@import './global';
+@import './components/ui';
 
-// TEMP
-@import "./dev";
-
-body {
-  color: var(--main-text-color);background-color:red;
-}
-
-.test {
-  color: red;
-}
-
-.r {
-  color: green;
-}
-
-.d {
-  color: dark;
-}
+// components

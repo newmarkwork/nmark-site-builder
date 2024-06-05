@@ -1,32 +1,32 @@
 :root {
-  --primary-font: "FONT_NAME", sans-serif;
+  --primary-font: 'Lato', sans-serif;
 
   // --secondary-font: "", sans-serif;
   // --accent-font: "", sans-serif;
 
-  --fs-xl           : clamp(36px, 5vw, 64px);
-  --fs-lg           : clamp(20px, 4vw, 48px);
-  --fs-md           : clamp(18px, 3vw, 32px);
-  --fs-sm           : clamp(16px, 3vw, 20px);
-  --fs-xs           : clamp(14px, 3vw, 16px);
-  --fw-h            : 900;                      // heavy
-  --fw-xb           : 800;                      // extra bold
-  --fw-b            : 700;                      // bold
-  --fw-sb           : 600;                      // semi bold
-  --fw-m            : 500;                      // medium
-  --fw-r            : 400;                      // regular
-  --fw-l            : 300;                      // light
-  --fw-xl           : 200;                      // extra light
-  --fw-t            : 100;                      // thin
-  --base-line-heigt : 1.2;
-  --main-title-fs   : var(--fs-lg);
-  --main-title-fw   : var(--fw-b);
-  --base-title-fs   : var(--fs-md);
-  --base-title-fw   : var(--fw-m);
-  --main-text-fs    : calc(var(--fs-md) / .8);
-  --base-text-fs    : var(--fs-sm);
+  --fs-xl: clamp(36px, 5vw, 64px);
+  --fs-lg: clamp(20px, 4vw, 48px);
+  --fs-md: clamp(18px, 3vw, 32px);
+  --fs-sm: clamp(16px, 3vw, 20px);
+  --fs-xs: clamp(14px, 3vw, 16px);
+  --fw-h: 900; // heavy
+  --fw-xb: 800; // extra bold
+  --fw-b: 700; // bold
+  --fw-sb: 600; // semi bold
+  --fw-m: 500; // medium
+  --fw-r: 400; // regular
+  --fw-l: 300; // light
+  --fw-xl: 200; // extra light
+  --fw-t: 100; // thin
+  --base-line-heigt: 1.2;
+  --main-title-fs: var(--fs-lg);
+  --main-title-fw: var(--fw-b);
+  --base-title-fs: var(--fs-md);
+  --base-title-fw: var(--fw-m);
+  --main-text-fs: calc(var(--fs-md) / 0.8);
+  --base-text-fs: var(--fs-sm);
   --main-title-color: var(--dark);
   --base-title-color: var(--dark);
-  --main-text-color : var(--dark);
-  --base-text-color : var(--dark);
+  --main-text-color: var(--dark);
+  --base-text-color: var(--dark);
 }

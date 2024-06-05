@@ -1,21 +1,16 @@
-const SOURCE_PATH = './src/'
-const BUILD_PATH = './build/'
+const SOURCE_PATH = './src/';
+const BUILD_PATH = './build/';
 
 const config = {
   fonts: {
-    src: `${SOURCE_PATH}assets/fonts/*.{woff,woff2}`,
-    watch: `${SOURCE_PATH}assets/fonts/*.{woff,woff2}`,
-    dest: `${BUILD_PATH}assets/fonts/`,
-  },
-
-  ttf: {
-    src: `${SOURCE_PATH}assets/fonts/**/*.{ttf}, {}`,
-    watch: `${SOURCE_PATH}assets/fonts/*.{ttf}`,
+    src: `${SOURCE_PATH}assets/fonts/*.ttf`,
+    watch: `${SOURCE_PATH}assets/fonts/*.ttf`,
     dest: `${BUILD_PATH}assets/fonts/`,
   },
 
   staticResources: {
     src: `${SOURCE_PATH}root-resources/**`,
+    watch: `${SOURCE_PATH}root-resources/**`,
     dest: BUILD_PATH,
   },
 
@@ -51,9 +46,9 @@ const config = {
   },
 
   setEnv() {
-    this.isProd = process.argv.includes('build')
-    this.isDev = !this.isProd
+    this.isProd = process.argv.includes('build');
+    this.isDev = !this.isProd;
   },
-}
+};
 
-export default { config, BUILD_PATH }
+export default { config, BUILD_PATH };
