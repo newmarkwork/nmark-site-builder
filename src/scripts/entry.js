@@ -1,3 +1,2 @@
-console.log('TEST2');
-
-import './modules/test-module';
+import './modules/page-loading';
+import './modules/input-number-mask';

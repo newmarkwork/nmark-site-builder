@@ -1,26 +1,36 @@
-import _config from '../gulp.config.js'
-const { config } = _config
+import _config from '../gulp.config.js';
+const { config } = _config;
 
-import gulp from 'gulp'
-const { src, dest } = gulp
+import { rollup } from 'rollup';
+import { babel } from '@rollup/plugin-babel';
+import commonjs from '@rollup/plugin-commonjs';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import terser from '@rollup/plugin-terser';
+import outputSize from 'rollup-plugin-output-size';
+import strip from '@rollup/plugin-strip';
 
-import rollup from 'gulp-better-rollup'
-import babel from 'rollup-plugin-babel'
-import resolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
-import rename from 'gulp-rename'
-import gulpIf from 'gulp-if'
-import uglify from 'gulp-uglify'
-import stripDebug from 'gulp-strip-debug'
-
-export const scripts = (done) => {
-  src(config.scripts.src, { sourcemaps: config.isProd ? false : true })
-    .pipe(rollup({ plugins: [babel(), resolve(), commonjs()] }, 'umd'))
-    .pipe(rename('bundle.js'))
-    .pipe(gulpIf(config.isProd, rename({ suffix: '.min' })))
-    .pipe(gulpIf(config.isProd, stripDebug()))
-    .pipe(gulpIf(config.isProd, uglify()))
-    .pipe(dest(config.scripts.dest, { sourcemaps: '.' }))
-
-  done()
-}
+export const scripts = async (done) => {
+  return await rollup({
+    input: config.scripts.entry,
+    plugins: [
+      babel({
+        presets: ['@babel/env'],
+        babelHelpers: 'bundled',
+      }),
+      nodeResolve(),
+      commonjs(),
+      config.isProd ? strip() : null,
+      config.isProd ? terser() : null,
+      outputSize(),
+    ],
+  }).then((bundle) => {
+    return bundle.write({
+      file: config.isProd
+        ? './build/assets/bundle.min.js'
+        : './build/assets/bundle.js',
+      format: 'umd',
+      name: 'build',
+      sourcemap: true,
+    });
+  });
+};

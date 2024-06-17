@@ -7,13 +7,13 @@ h6,
 .base-title,
 .main-title {
   margin-top: 0;
-  margin-bottom: 0.6em;
+  margin-bottom: 1.2em;
   font-weight: var(--fw-b);
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 0.4em;
+  margin-bottom: 1.5em;
   font-weight: var(--fw-r);
 }
 
@@ -45,6 +45,7 @@ h6 {
   display: block;
   font-size: var(--main-title-fs);
   font-weight: var(--main-title-fw);
+  margin-bottom: 2em;
   color: var(--main-title-color);
 }
 
@@ -58,6 +59,7 @@ h6 {
 .main-text {
   display: block;
   font-size: var(--main-text-fs);
+  line-height: 1.5;
   color: var(--main-text-color);
 }
 

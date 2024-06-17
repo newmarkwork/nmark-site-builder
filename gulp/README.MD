@@ -23,13 +23,13 @@
 ### JS
 
 - @babel/core : компилятор кода ES6 в ES5
-- gulp-better-rollup : плагин, который позволяет нам использовать Rollup.
 - rollup - сборщик модулей JavaScript, который позволяет нам использовать ES6 в нашем коде
-- rollup-plugin-babel : плагин Rollup, который интегрирует Babel в процесс объединения
-- rollup-plugin-node-resolve : плагин Rollup, позволяющий использовать сторонние модули в node_modules
-- rollup-plugin-commonjs : плагин Rollup, преобразующий модули CommonJS в ES6(чтобы мы могли без проблем импортировать их)
-- gulp-uglify : минификация JavaScript
-- gulp-strip-debug : удаление операторов консоли, предупреждений и отладчика из кода JavaScript
+- @rollup/plugin-babel : плагин Rollup, который интегрирует Babel в процесс объединения
+- @rollup/plugin-node-resolve : плагин Rollup, позволяющий использовать сторонние модули в node_modules
+- @rollup/plugin-commonjs : плагин Rollup, преобразующий модули CommonJS в ES6(чтобы мы могли без проблем импортировать их)
+- @rollup/plugin-terser : минификатор JS
+- rollup-plugin-output-size : плагин для показа итогового размера бандла
+- @rollup/plugin-strip : удаление комментариев из кода
 
 ### IMAGES AND SVGS
 
@@ -66,3 +66,4 @@
 
 - для запуска в режиме разработки используем команду gulp start
 - для сборки проекта используем команду gulp build
+- для запуска тестов используем команду npm run test

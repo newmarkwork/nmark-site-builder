@@ -1,8 +1,8 @@
-import _config from '../gulp.config.js'
-const { BUILD_PATH } = _config
+import _config from '../gulp.config.js';
+const { BUILD_PATH } = _config;
 
-import browserSync from 'browser-sync'
-browserSync.create()
+import browserSync from 'browser-sync';
+browserSync.create();
 
 export const server = () => {
   browserSync.init({
@@ -13,10 +13,10 @@ export const server = () => {
     server: {
       baseDir: BUILD_PATH,
     },
-  })
-}
+  });
+};
 
 export const refresh = (done) => {
-  browserSync.reload()
-  done()
-}
+  browserSync.reload();
+  done();
+};

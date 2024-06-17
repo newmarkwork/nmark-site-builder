@@ -2,6 +2,12 @@ const SOURCE_PATH = './src/';
 const BUILD_PATH = './build/';
 
 const config = {
+  // fonts: {
+  //   src: `${SOURCE_PATH}assets/fonts/*.{woff,woff2}`,
+  //   watch: `${SOURCE_PATH}assets/fonts/*.{woff,woff2}`,
+  //   dest: `${BUILD_PATH}assets/fonts/`,
+  // },
+
   fonts: {
     src: `${SOURCE_PATH}assets/fonts/*.ttf`,
     watch: `${SOURCE_PATH}assets/fonts/*.ttf`,
@@ -16,7 +22,7 @@ const config = {
 
   pug: {
     src: `${SOURCE_PATH}pug/*.pug`,
-    watch: `${SOURCE_PATH}pug/**/*.{pug,scss,md}`,
+    watch: `${SOURCE_PATH}pug/**/*.{pug,scss,md,js}`,
     dest: BUILD_PATH,
   },
 
@@ -27,6 +33,7 @@ const config = {
   },
 
   scripts: {
+    entry: `${SOURCE_PATH}scripts/entry.js`,
     src: `${SOURCE_PATH}scripts/*.js`,
     watch: `${SOURCE_PATH}scripts/**/*.js`,
     dest: `${BUILD_PATH}assets/`,
@@ -41,7 +48,7 @@ const config = {
   sprite: {
     src: `${SOURCE_PATH}assets/svg-sprite/**/icon-*.svg`,
     name: `sprite.svg`,
-    watchSrc: `${SOURCE_PATH}assets/svg-sprite/**/icon-*.svg`,
+    watch: `${SOURCE_PATH}assets/svg-sprite/**/icon-*.svg`,
     dest: `${BUILD_PATH}assets/`,
   },
 

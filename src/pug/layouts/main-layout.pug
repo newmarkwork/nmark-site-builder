@@ -8,16 +8,18 @@ html(lang="ru")
   +main-head(title, description, keywords, styleFileNames)
 
   body
-    //- include ../components/loader
-    include ../components/static/main-header
+    include ../components/loaders/loader
+    include ../components/header/header
 
     main
       block content
 
-    include ../components/static/main-footer
+    include ../components/footer/footer
 
     //- Модальные окна используемые на ВСЕХ страницах сайта
-    //- include ./modals/callback-modal
+
+    include ../modals/success-modal
+    include ../modals/error-modal
 
     block modals
 
