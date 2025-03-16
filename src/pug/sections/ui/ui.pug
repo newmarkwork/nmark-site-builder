@@ -1,0 +1,45 @@
+include ../../components/_ui/buttons/btn/btn
+
+section.ui
+  .container
+    h2.base-title UI-компоненты
+    
+    .ui__wrapper
+      .ui__sidebar
+        +btn({
+          tag: 'button',
+          cls: 'btn-thin rounded-sm ui-switcher active',
+          dataId: 'typography',
+          title: 'Типографика'
+        })
+        +btn({
+          tag: 'button',
+          cls: 'btn-thin rounded-sm ui-switcher',
+          dataId: 'colors',
+          title: 'Колористика'
+        })
+        +btn({
+          tag: 'button',
+          cls: 'btn-thin ui-switcher',
+          dataId: 'buttons',
+          title: 'Кнопки'
+        })
+        +btn({
+          tag: 'button',
+          cls: 'btn-thin ui-switcher',
+          dataId: 'form-controls',
+          title: 'Элементы форм'
+        })
+        +btn({
+          tag: 'button',
+          cls: 'btn-thin rounded-sm ui-switcher',
+          dataId: 'content-block',
+          title: 'Контентный блок'
+        })
+      .ui__content
+        include ./typography
+        include ./colors
+        include ./buttons
+        include ./form-controls
+        include ./content-block
+      

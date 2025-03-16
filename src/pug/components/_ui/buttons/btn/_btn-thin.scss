@@ -1,0 +1,12 @@
+@forward "@pug/components/_ui/buttons/btn/_btn";
+
+.btn-thin {
+	@extend %btn;
+	padding: 5px 0;
+	width: fit-content;
+	background-color: transparent;
+	color: var(--primary);
+	text-decoration: underline;
+	text-underline-offset: 5px;
+	min-height: fit-content;
+}

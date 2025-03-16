@@ -5,22 +5,13 @@ doctype html
 block variables
 
 html(lang="ru")
-  +main-head(title, description, keywords, styleFileNames)
+ +main-head(title, description)
 
-  body
-    include ../components/loaders/loader
-    include ../components/header/header
+include ./header/header
 
-    main
-      block content
+main
+  block content
 
-    include ../components/footer/footer
+include ./footer/footer
 
-    //- Модальные окна используемые на ВСЕХ страницах сайта
-
-    include ../modals/success-modal
-    include ../modals/error-modal
-
-    block modals
-
-    //- script(async src="https://api-maps.yandex.ru/2.1/?apikey=4aa8fccd-d097-4486-835a-704db2b05b2e&lang=ru_RU")
+block modals

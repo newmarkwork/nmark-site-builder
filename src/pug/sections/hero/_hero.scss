@@ -1,0 +1,6 @@
+@use "@styles/_mixins/container-queries" as *;
+@use "@styles/_vars/scoped" as *;
+@forward "@styles/_extends/flexbox.scss";
+
+.hero {
+}

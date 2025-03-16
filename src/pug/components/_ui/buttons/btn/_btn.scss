@@ -1,0 +1,43 @@
+@forward "@styles/_extends/flexbox.scss";
+@forward "@styles/_extends/effects.scss";
+%btn {
+	@extend %flex-align;
+	justify-content: center;
+	gap: 6px;
+	width: 100%;
+	max-width: fit-content;
+	min-height: 48px;
+	font-size: 16px;
+	line-height: 1;
+	font-weight: 600;
+	padding: 12px 24px;
+	border: 2px solid transparent;
+	transition: color var(--main-transition),
+		background-color var(--main-transition), border-color var(--main-transition),
+		opacity var(--main-transition);
+	@extend %base-hover-effect;
+
+	span {
+		line-height: 1;
+	}
+
+	svg {
+		transition: fill var(--main-transition);
+	}
+
+	&.rounded-xs {
+		border-radius: var(--border-radius-xs);
+	}
+
+	&.rounded-sm {
+		border-radius: var(--border-radius-sm);
+	}
+
+	&.rounded-md {
+		border-radius: var(--border-radius-md);
+	}
+
+	&.rounded-lg {
+		border-radius: var(--border-radius-lg);
+	}
+}
